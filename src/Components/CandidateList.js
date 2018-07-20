@@ -1,4 +1,6 @@
 import React from 'react';
+import CandidateCard from './CandidateCard'
+import './CandidateList.css'
 
 import axios from 'axios';
 
@@ -18,18 +20,8 @@ export default class CandidateList extends React.Component {
 
     render() {
         return (
-            <div>
-            {this.state.candidates.map(candidate =>     
-                
-                <div className = "cand-details">
-                    <p> {candidate.firstName} {candidate.lastName} </p>
-                    <p> {candidate.currentJobTitle} </p>
-                    <p> {candidate.location} </p>
-                    <p> {candidate.phoneNumber} </p>
-    
-    
-                </div>
-            )}
+            <div className="candidate-list-wrapper">
+                {this.state.candidates.map(candidate => <CandidateCard {...candidate} />)}
             </div>
         )
     }
