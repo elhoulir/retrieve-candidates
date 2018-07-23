@@ -2,6 +2,7 @@ import React from 'react'
 import './CandidateCard.css'
 
 export default function CandidateCard({
+    _id,
     firstName,
     lastName,
     currentJobTitle,
@@ -9,7 +10,8 @@ export default function CandidateCard({
     phoneNumber
 }) {
     return <div className="candidate">
-        <div className="candidate-details">
+       
+       <div className="candidate-details">
             <h3>{firstName} {lastName}</h3>
             <h4>{currentJobTitle}</h4>
             <p>{location}</p>

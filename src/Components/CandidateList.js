@@ -10,7 +10,7 @@ export default class CandidateList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`https://backend-bzorbvezmq.now.sh/candidates`)
+        axios.get(`https://backend-izuntatfte.now.sh/candidates`)
             .then(res => {
                 const candidates = res.data;
                 this.setState({ candidates });
